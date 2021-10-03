@@ -34,4 +34,35 @@ public class SwitchArrayTest {
         int[] expected = {1, 3, 2, 4};
         Assert.assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void whenSwapString0to3() {
+        String[] input = {"a", "b", "c", "d"};
+        int source = 0;
+        int dest = input.length - 1;
+        String[] result = SwitchArray.swap(input, source, dest);
+        String[] expected = {"d", "b", "c", "a"};
+        Assert.assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void whenSwapString1to2() {
+        String[] input = {"a", "b", "c", "d"};
+        int source = 1;
+        int dest = 2;
+        String[] result = SwitchArray.swap(input, source, dest);
+        String[] expected = {"a", "c", "b", "d"};
+        Assert.assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void whenSwapString2to1() {
+        String[] input = {"a", "b", "c", "d"};
+        int source = 2;
+        int dest = 1;
+        String[] result = SwitchArray.swap(input, source, dest);
+        String[] expected = {"a", "c", "b", "d"};
+        Assert.assertArrayEquals(expected, result);
+    }
+    
 }
