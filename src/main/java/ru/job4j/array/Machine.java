@@ -8,8 +8,9 @@ public class Machine {
         int[] coins = {10, 5, 2, 1};
         int[] rsl = new int[100];
         int size = 0;
+        int i = 0;
         int remainder = money - price;
-        for (int i = 0; remainder > 0;) {
+        while (remainder > 0) {
             if (remainder >= coins[i]) {
                 rsl[size] = coins[i];
                 remainder -= coins[i];
