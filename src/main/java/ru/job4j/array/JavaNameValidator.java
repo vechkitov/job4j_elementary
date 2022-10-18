@@ -7,7 +7,7 @@ public class JavaNameValidator {
             return false;
         }
         boolean res = true;
-        for (int i = 0; i < name.length(); i++) {
+        for (int i = 1; i < name.length(); i++) {
             int code = name.codePointAt(i);
             res = isSpecialSymbol(code)
                     || isUpperLatinLetter(code)
